@@ -36,7 +36,6 @@ body {
     font-family: "Roboto", sans-serif;
     color: #434455;
     background-color: #fff;
-    ;
 }
 
 .page-header {
@@ -105,9 +104,18 @@ a {
 }
 
 .page-section {
+    max-width: 100%;
     padding: 188px 0;
     background-color: #2e2f42;
+    background-image: linear-gradient( to bottom,
+    rgba(46, 47, 66, 0.7),
+    rgba(46, 47, 66, 0.7)),
+    url("../images/people-office.jpg");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
 }
+
 
 .page-section .container {
     display: flex;
@@ -210,6 +218,10 @@ a {
     padding-bottom: 72px;
 }
 .team-card-content {
+    border-radius: 0 0 3px 3px;
+    box-shadow: 0 2px 1px 0 rgba(46, 47, 66, 0.08),
+    0 1px 1px 0 rgba(46, 47, 66, 0.16),
+    0 1px 6px 0 rgba(46, 47, 66, 0.08);;
     padding: 32px 16px;
     text-align: center;
 }
