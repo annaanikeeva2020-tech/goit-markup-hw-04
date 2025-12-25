@@ -30,6 +30,8 @@ ol {
 
 img {
     display: block;
+    max-width: 100%;
+    object-fit: cover;
 }
 
 body {
@@ -249,6 +251,43 @@ padding-top: 8px;
     margin-bottom: 8px;
 }
 
+.socials {
+    display: flex;
+    justify-content: center;
+    gap: 24px;
+    margin-top: 8px;
+}
+.socials a {
+    width: 40px;
+    height: 40px;
+    background-color: #4d5ae5;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 
+    background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    
+}
+
+.socials .social-link:hover {
+    fill: #fff;
+}
+
+.socials a:hover {
+    background-color: #404bbf;
+}
+
+.social-link {
+    width: 16px;
+    height: 16px;
+    fill: #ffffff;
+}
+
+.social-link:hover {
+    fill: #404bbf;
+}
+
 .portfolio-card {
     transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
     background: #fff;
@@ -273,10 +312,30 @@ padding-top: 8px;
     padding: 120px 0;
 }
 
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transform: translateY(100%);
+    transition: transform 250ms ease-in-out;
+    padding: 8px;
+        background-color: #4d5ae5;
+        color: #fff;
+        font-family: sans-serif;
+}
+
+.portfolio-card-content:hover .overlay {
+    transform: translateY(0);
+}
+
 .portfolio-card-content {
     padding: 32px 16px;
     border: 1px solid #e7e9fc;
     border-top: none;
+    position: relative;
+    overflow: hidden;
 }
 
 .portfolio-section .container ul {
@@ -375,8 +434,8 @@ p {
 
 .page-footer .container {
     display: flex;
-    flex-direction: column;
-    gap: 16px;
+    align-items: baseline;
+    gap: 120px;
 }
 
 .footer-logo {
@@ -393,11 +452,48 @@ p {
 }
 
 .text-footer {
+    margin-top: 16px;
     max-width: 264px;
     font-weight: 400;
     font-size: 16px;
     line-height: 1.5;
     letter-spacing: 0.02em;
     color: #f4f4fd;
-    
+}
+
+.footer-social {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.footer-social-title {
+    color: #ffffff;
+    font-weight: 500;
+}
+
+.socials-footer {
+    display: flex;
+    gap: 16px;
+}
+
+.socials-footer a {
+    width: 40px;
+    height: 40px;
+    background-color: #404bbf;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.socials-footer a:hover {
+    background-color: #31d0aa;
+}
+
+.social-link-footer {
+    width: 24px;
+    height: 24px;
+    fill: #f4f4fd;
 }
