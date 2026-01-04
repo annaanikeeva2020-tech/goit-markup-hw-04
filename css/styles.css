@@ -168,7 +168,7 @@ a {
 .features-item {
     width: calc((100% - 72px) / 4);
     display: block;
-    margin: 0 auto 24px;
+    
 }
 
 .features-icon-box {
